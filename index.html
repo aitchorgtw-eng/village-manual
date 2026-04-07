@@ -9,24 +9,40 @@
   
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
   
-  <style>
-    /* 針對長輩閱讀習慣優化 */
-    :root {
-      --theme-color: #2c7a7b; /* 養生村主題色：深綠色 */
-    }
-    .markdown-section {
-      font-size: 1.2rem; /* 字體加大 */
-      line-height: 1.8;  /* 行距加寬 */
-      max-width: 800px;
-    }
-    .sidebar {
-      font-size: 1.1rem;
-    }
-    /* 修正搜尋框手機端樣式 */
-    .search input {
-      font-size: 1rem !important;
-    }
-  </style>
+<style>
+  :root {
+    --theme-color: #2c7a7b;
+  }
+  .markdown-section {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 800px;
+    padding-top: 20px; /* 增加頂部間距避免被搜尋框擋住 */
+  }
+  
+  /* --- 強化搜尋框外觀 --- */
+  .search {
+    border-bottom: 2px solid #eee;
+    background: #f9f9f9;
+  }
+  .search input {
+    font-size: 1.2rem !important; /* 加大輸入文字 */
+    font-weight: bold;
+    padding: 15px 10px !important;
+  }
+
+  /* --- 加大左下角選單按鈕 (手機版) --- */
+  .sidebar-toggle {
+    width: 50px;
+    height: 50px;
+    background: rgba(44, 122, 123, 0.1) !important;
+    border-radius: 50%;
+    bottom: 20px; /* 改到右下方可能更好按，或加大左方按鈕 */
+  }
+  .sidebar-toggle span {
+    width: 30px;
+  }
+</style>
 </head>
 <body>
   <div id="app">載入中，請稍候...</div>
